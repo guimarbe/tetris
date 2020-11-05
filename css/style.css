@@ -1,0 +1,186 @@
+/* GENERAL CONFIG */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(248, 202, 0, 0.9),
+    rgba(233, 127, 2, 0.9),
+    rgba(189, 21, 80, 0.9),
+    rgba(73, 10, 61, 0.9)
+  );
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+}
+
+/* GAME */
+.panel {
+  width: 80rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  box-shadow: 0rem 1rem 5rem rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+
+  display: flex;
+}
+
+.game {
+  order: 0;
+  flex: 0 0 50%;
+}
+
+.display {
+  order: 1;
+  flex: 0 0 50%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  font-size: 10rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+  color: rgb(189, 61, 120);
+  align-self: center;
+  text-shadow: 
+        /* Primera capa */ 0 0 0 rgb(189, 61, 120),
+    0.1rem 0.1rem 0 rgba(189, 51, 110), 0.2rem 0.2rem 0 rgb(189, 46, 105),
+    0.3rem 0.3rem 0 rgb(189, 41, 100), 0.4rem 0.4rem 0 rgb(189, 36, 95),
+    0.5rem 0.5rem 0 rgb(189, 31, 90), 0.6rem 0.6rem 0 rgb(189, 26, 85),
+    0.7rem 0.7rem 0 rgb(189, 21, 80),
+    /* Segunda capa */ 1.1rem 1.1rem 0.2rem rgba(73, 10, 61, 0.5),
+    -0.7rem -0.7rem 2rem rgba(73, 10, 61, 0.4),
+    1rem 0 2rem rgba(73, 10, 61, 0.4), 0.7rem 0.7rem 2rem rgba(73, 10, 61, 0.5),
+    -1rem 2rem 2.5rem rgba(73, 10, 61, 0.5), 0 1rem 2.5rem rgba(73, 10, 61, 0.6),
+    0 1.5rem 6rem rgba(73, 10, 61, 0.7), 0.6rem 4rem 8rem rgba(73, 10, 61, 0.8);
+}
+
+#heading-2 {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: none;
+}
+
+button {
+  margin: 4rem 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  text-shadow: 0 0.7rem 0.8rem rgba(0, 0, 0, 0.3);
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #555;
+
+  align-self: center;
+  transition: font-weight 0.3s, transform 0.1s, text-shadow 0.1s, color 0.1s;
+}
+
+button:active {
+  color: #333;
+  transform: scale(1.1);
+  text-shadow: 0 1rem 0.6rem rgba(0, 0, 0, 0.4);
+}
+button:hover {
+  font-weight: 500;
+}
+button:hover i {
+  margin-right: 2.5rem;
+}
+
+i {
+  color: rgba(233, 127, 2, 0.9);
+  display: inline-block;
+  margin-right: 1.5rem;
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1;
+  vertical-align: text-top;
+  margin-top: 0.2rem;
+  transition: margin 0.3s;
+}
+
+.score {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 2rem;
+  align-self: center;
+}
+
+.score span {
+  font-size: 5rem;
+  margin-left: 6rem;
+}
+
+.grid div,
+.previous-grid div {
+  width: 4rem;
+  height: 4rem;
+}
+
+.grid div {
+  background-color: #aaa;
+}
+
+.grid {
+  width: 40rem;
+  height: 80rem;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.previous-grid {
+  width: 16rem;
+  height: 16rem;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.previous-shape {
+  width: 16rem;
+  height: 16rem;
+  margin: auto 0 6rem 4rem;
+}
+
+.grid .block,
+.previous-grid .block {
+  background-color: rgb(189, 21, 80);
+}
+
+.grid .block2,
+.previous-grid .block2 {
+  background-color: rgb(73, 10, 61);
+}
+
+.grid .block3,
+.previous-grid .block3 {
+  background-color: rgb(73, 10, 61);
+}
